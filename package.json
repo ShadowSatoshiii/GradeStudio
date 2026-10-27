@@ -1,0 +1,55 @@
+{
+  "name": "gradestudio",
+  "productName": "GradeStudio",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Non-destructive photo editor and library that runs entirely on your own machine. No account, no subscription, no cloud.",
+  "keywords": [
+    "photo-editor",
+    "raw-workflow",
+    "color-grading",
+    "webgl2",
+    "react",
+    "electron",
+    "local-first"
+  ],
+  "author": "Can Yando",
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/canyando4699-pixel/GradeStudio#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canyando4699-pixel/GradeStudio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/canyando4699-pixel/GradeStudio/issues"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "type": "module",
+  "main": "electron/main.js",
+  "scripts": {
+    "postinstall": "node scripts/setup-assets.mjs",
+    "setup": "node scripts/setup-assets.mjs",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "preview": "vite preview",
+    "app": "vite build && electron .",
+    "desktop": "npm run build && node electron/pack.js"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^0.10.35",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "electron": "^45.0.0",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.2"
+  }
+}
